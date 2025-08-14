@@ -14,6 +14,21 @@ export type Database = {
   }
   public: {
     Tables: {
+      games: {
+        Row: {
+          date: string
+          id: string
+        }
+        Insert: {
+          date: string
+          id?: string
+        }
+        Update: {
+          date?: string
+          id?: string
+        }
+        Relationships: []
+      }
       players: {
         Row: {
           contact_number: number | null
