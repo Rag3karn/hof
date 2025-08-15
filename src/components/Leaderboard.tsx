@@ -28,7 +28,7 @@ export default function Leaderboard({ players }: LeaderboardProps) {
             <TableRow className="bg-primary hover:bg-primary">
               <TableHead className="text-primary-foreground font-bold">#</TableHead>
               <TableHead className="text-primary-foreground font-bold">Player Name</TableHead>
-              <TableHead className="text-primary-foreground font-bold">MVP Medals</TableHead>
+              <TableHead className="text-primary-foreground font-bold text-center">MVP Medals</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
