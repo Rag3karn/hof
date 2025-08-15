@@ -16,7 +16,7 @@ export default function SocialLinks() {
           <span className="font-medium">YouTube</span>
         </a>
         <a
-          href="https://www.instagram.com/humansoffootball/"
+          href="https://www.instagram.com/humans.of.football/"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center space-x-2 text-pink-600 hover:text-pink-700 transition-colors"
