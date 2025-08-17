@@ -4,7 +4,7 @@ import { Youtube, Instagram } from "lucide-react";
 export default function SocialLinks() {
   return (
     <Card className="p-6">
-      <h3 className="text-lg font-semibold mb-4 text-primary text-center">Follow Humans of football</h3>
+      <h3 className="text-lg font-semibold mb-4 text-green-400 text-center">Follow Humans of football</h3>
       <div className="flex justify-center space-x-6">
         <a
           href="https://www.youtube.com/@HumansOfFootball"
