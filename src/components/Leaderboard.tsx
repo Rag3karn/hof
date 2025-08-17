@@ -21,7 +21,7 @@ interface LeaderboardProps {
 export default function Leaderboard({ players }: LeaderboardProps) {
   return (
     <Card className="p-6">
-      <h2 className="text-2xl font-bold mb-4 text-foreground">MVP Leaderboard</h2>
+      <h2 className="text-2xl font-bold mb-4 text-primary">MVP Leaderboard</h2>
       <div className="overflow-auto">
         <Table>
           <TableHeader>
