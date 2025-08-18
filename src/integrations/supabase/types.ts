@@ -29,6 +29,27 @@ export type Database = {
         }
         Relationships: []
       }
+      gotd_players: {
+        Row: {
+          contact_number: number | null
+          gotd: number | null
+          id: number
+          name: string
+        }
+        Insert: {
+          contact_number?: number | null
+          gotd?: number | null
+          id: number
+          name: string
+        }
+        Update: {
+          contact_number?: number | null
+          gotd?: number | null
+          id?: number
+          name?: string
+        }
+        Relationships: []
+      }
       players: {
         Row: {
           contact_number: number | null
