@@ -6,22 +6,21 @@ import { useNavigate } from "react-router-dom";
 // Logo will be updated when properly saved
 
 const Index = () => {
-  const { players, gamesCount, loading } = useHennurRealtimeData();
+  const {
+    players,
+    gamesCount,
+    loading
+  } = useHennurRealtimeData();
   const navigate = useNavigate();
-
   if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-background">
+    return <div className="min-h-screen flex items-center justify-center bg-background">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
           <p className="text-muted-foreground">Loading Hennur Leaderboard...</p>
         </div>
-      </div>
-    );
+      </div>;
   }
-
-  return (
-    <div className="min-h-screen p-4 relative">
+  return <div className="min-h-screen p-4 relative">
       <div className="football-background"></div>
       <div className="container mx-auto relative z-10">
         {/* Header with Logo */}
@@ -31,15 +30,11 @@ const Index = () => {
               HoF
             </div>
             <div className="text-left">
-              <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-1">Hennur Leaderboard</h1>
+              <h1 className="text-3xl md:text-4xl font-bold mb-1 text-slate-950">Hennur Leaderboard</h1>
               <p className="text-muted-foreground">Humans of Football Hennur</p>
             </div>
           </div>
-          <Button 
-            onClick={() => navigate('/social-media')} 
-            variant="outline" 
-            className="text-green-400 border-green-400 hover:bg-green-400 hover:text-background"
-          >
+          <Button onClick={() => navigate('/social-media')} variant="outline" className="text-green-400 border-green-400 hover:bg-green-400 hover:text-background">
             Social Media
           </Button>
         </div>
@@ -57,8 +52,6 @@ const Index = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
