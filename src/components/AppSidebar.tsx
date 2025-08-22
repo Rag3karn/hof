@@ -1,4 +1,4 @@
-import { Home, MapPin, ChevronRight } from "lucide-react";
+import { MapPin, ChevronRight } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import {
   Sidebar,
@@ -15,7 +15,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 import { useState } from "react";
 
 const items = [
-  { title: "Hennur", url: "/", icon: Home },
+  { title: "Hennur", url: "/", icon: MapPin },
   { title: "Koramangala", url: "/koramangala", icon: MapPin },
 ];
 
@@ -23,7 +23,7 @@ export function AppSidebar() {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <Sidebar className={isExpanded ? "w-60" : "w-14"} collapsible="none">
+    <Sidebar className={`${isExpanded ? "w-60" : "w-14"} bg-green-500 text-white`} collapsible="none">
       <SidebarContent>
         <Collapsible open={isExpanded} onOpenChange={setIsExpanded}>
           <CollapsibleTrigger className="flex w-full items-center justify-between p-2 hover:bg-muted/50 rounded-md">
