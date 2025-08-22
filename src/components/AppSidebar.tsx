@@ -23,7 +23,7 @@ export function AppSidebar() {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <Sidebar className={`${isExpanded ? "w-60" : "w-14"} bg-green-500 text-white`} collapsible="none">
+    <Sidebar className={`${isExpanded ? "w-60" : "w-14"} bg-green-500 text-black`} collapsible="none">
       <SidebarContent>
         <Collapsible open={isExpanded} onOpenChange={setIsExpanded}>
           <CollapsibleTrigger className="flex w-full items-center justify-between p-2 hover:bg-muted/50 rounded-md">
