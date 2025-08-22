@@ -31,7 +31,7 @@ export default function RecordedGames() {
       <div className="space-y-4">
         {recordedGames.map((game, index) => (
           <div key={index} className="border-l-2 border-primary pl-4">
-            <h4 className="font-medium text-foreground">{game.title}</h4>
+            <h4 className="font-medium text-black">{game.title}</h4>
             <p className="text-sm text-muted-foreground mb-2">Score - {game.score}</p>
             <a
               href={game.link}
