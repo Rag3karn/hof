@@ -1,4 +1,4 @@
-import { Home, MapPin } from "lucide-react";
+import { Home, MapPin, ChevronRight } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import {
   Sidebar,
@@ -11,6 +11,8 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { useState } from "react";
 
 const items = [
   { title: "Hennur", url: "/", icon: Home },
@@ -18,37 +20,47 @@ const items = [
 ];
 
 export function AppSidebar() {
-  const { state } = useSidebar();
-  const isCollapsed = state === "collapsed";
+  const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <Sidebar className={isCollapsed ? "w-14" : "w-60"} collapsible="icon">
+    <Sidebar className={isExpanded ? "w-60" : "w-14"} collapsible="none">
       <SidebarContent>
-        <SidebarGroup>
-          <SidebarGroupLabel>Locations</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {items.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild>
-                    <NavLink 
-                      to={item.url} 
-                      end
-                      className={({ isActive }) =>
-                        isActive 
-                          ? "bg-muted text-primary font-medium" 
-                          : "hover:bg-muted/50"
-                      }
-                    >
-                      <item.icon className="mr-2 h-4 w-4" />
-                      {!isCollapsed && <span>{item.title}</span>}
-                    </NavLink>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
+        <Collapsible open={isExpanded} onOpenChange={setIsExpanded}>
+          <CollapsibleTrigger className="flex w-full items-center justify-between p-2 hover:bg-muted/50 rounded-md">
+            <span className={`text-sm font-medium ${!isExpanded ? "sr-only" : ""}`}>
+              Locations
+            </span>
+            <ChevronRight 
+              className={`h-4 w-4 transition-transform ${isExpanded ? "rotate-90" : ""}`} 
+            />
+          </CollapsibleTrigger>
+          <CollapsibleContent>
+            <SidebarGroup>
+              <SidebarGroupContent>
+                <SidebarMenu>
+                  {items.map((item) => (
+                    <SidebarMenuItem key={item.title}>
+                      <SidebarMenuButton asChild>
+                        <NavLink 
+                          to={item.url} 
+                          end
+                          className={({ isActive }) =>
+                            isActive 
+                              ? "bg-muted text-primary font-medium" 
+                              : "hover:bg-muted/50"
+                          }
+                        >
+                          <item.icon className="mr-2 h-4 w-4" />
+                          <span>{item.title}</span>
+                        </NavLink>
+                      </SidebarMenuButton>
+                    </SidebarMenuItem>
+                  ))}
+                </SidebarMenu>
+              </SidebarGroupContent>
+            </SidebarGroup>
+          </CollapsibleContent>
+        </Collapsible>
       </SidebarContent>
     </Sidebar>
   );
