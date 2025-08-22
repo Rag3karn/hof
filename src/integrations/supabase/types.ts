@@ -50,6 +50,39 @@ export type Database = {
         }
         Relationships: []
       }
+      hennur_players: {
+        Row: {
+          contact_number: number | null
+          created_at: string | null
+          gotd: number | null
+          id: number
+          mvp_medals: number | null
+          name: string
+          total_points: number | null
+          updated_at: string | null
+        }
+        Insert: {
+          contact_number?: number | null
+          created_at?: string | null
+          gotd?: number | null
+          id?: number
+          mvp_medals?: number | null
+          name: string
+          total_points?: number | null
+          updated_at?: string | null
+        }
+        Update: {
+          contact_number?: number | null
+          created_at?: string | null
+          gotd?: number | null
+          id?: number
+          mvp_medals?: number | null
+          name?: string
+          total_points?: number | null
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
       players: {
         Row: {
           contact_number: number | null
