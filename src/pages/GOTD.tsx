@@ -3,12 +3,9 @@ import RecordedGames from "@/components/RecordedGames";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-
 const SocialMedia = () => {
   const navigate = useNavigate();
-
-  return (
-    <div className="min-h-screen p-4 relative">
+  return <div className="min-h-screen p-4 relative">
       <div className="football-background"></div>
       <div className="container mx-auto relative z-10">
         {/* Header with Logo and Back Button */}
@@ -18,15 +15,11 @@ const SocialMedia = () => {
               HoF
             </div>
             <div className="text-left">
-              <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-1">Social Media</h1>
+              <h1 className="text-3xl md:text-4xl font-bold mb-1 text-slate-950">Social Media</h1>
               <p className="text-muted-foreground">Humans of Football Content</p>
             </div>
           </div>
-          <Button 
-            onClick={() => navigate('/')} 
-            variant="outline" 
-            className="text-green-400 border-green-400 hover:bg-green-400 hover:text-background"
-          >
+          <Button onClick={() => navigate('/')} variant="outline" className="text-green-400 border-green-400 hover:bg-green-400 hover:text-background">
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Hennur
           </Button>
@@ -45,8 +38,6 @@ const SocialMedia = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default SocialMedia;
