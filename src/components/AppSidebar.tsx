@@ -33,7 +33,7 @@ export function AppSidebar() {
                       isActive
                     }) => isActive ? "bg-muted text-primary font-medium" : "hover:bg-muted/50"}>
                           <item.icon className="mr-2 h-4 w-4" />
-                          <span className="text-slate-950">{item.title}</span>
+                          <span className="text-slate-50">{item.title}</span>
                         </NavLink>
                       </SidebarMenuButton>
                     </SidebarMenuItem>)}
