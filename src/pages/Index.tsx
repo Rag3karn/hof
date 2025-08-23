@@ -1,8 +1,6 @@
 import HennurLeaderboard from "@/components/HennurLeaderboard";
 import GamesPlayed from "@/components/GamesPlayed";
 import { useHennurRealtimeData } from "@/hooks/useHennurRealtimeData";
-import { Button } from "@/components/ui/button";
-import { useNavigate } from "react-router-dom";
 // Logo will be updated when properly saved
 
 const Index = () => {
@@ -11,7 +9,6 @@ const Index = () => {
     gamesCount,
     loading
   } = useHennurRealtimeData();
-  const navigate = useNavigate();
   if (loading) {
     return <div className="min-h-screen flex items-center justify-center bg-background">
         <div className="text-center">
@@ -24,7 +21,7 @@ const Index = () => {
       <div className="football-background"></div>
       <div className="container mx-auto relative z-10">
         {/* Header with Logo */}
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center mb-8">
           <div className="flex items-center gap-4 sporty-float">
             <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center text-primary-foreground font-bold text-xl md:text-2xl shadow-lg">
               HoF
@@ -34,9 +31,6 @@ const Index = () => {
               <p className="text-muted-foreground">Humans of Football Hennur</p>
             </div>
           </div>
-          <Button onClick={() => navigate('/social-media')} variant="outline" className="text-green-400 border-green-400 hover:bg-green-400 hover:text-background">
-            Social Media
-          </Button>
         </div>
 
         {/* Main Layout */}
