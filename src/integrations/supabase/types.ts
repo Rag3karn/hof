@@ -14,7 +14,7 @@ export type Database = {
   }
   public: {
     Tables: {
-      games: {
+      hennur_games: {
         Row: {
           date: string
           id: string
@@ -26,27 +26,6 @@ export type Database = {
         Update: {
           date?: string
           id?: string
-        }
-        Relationships: []
-      }
-      gotd_players: {
-        Row: {
-          contact_number: number | null
-          gotd: number | null
-          id: number
-          name: string
-        }
-        Insert: {
-          contact_number?: number | null
-          gotd?: number | null
-          id: number
-          name: string
-        }
-        Update: {
-          contact_number?: number | null
-          gotd?: number | null
-          id?: number
-          name?: string
         }
         Relationships: []
       }
@@ -83,24 +62,51 @@ export type Database = {
         }
         Relationships: []
       }
-      players: {
+      koramangala_games: {
+        Row: {
+          date: string
+          id: string
+        }
+        Insert: {
+          date: string
+          id?: string
+        }
+        Update: {
+          date?: string
+          id?: string
+        }
+        Relationships: []
+      }
+      koramangala_players: {
         Row: {
           contact_number: number | null
+          created_at: string | null
+          gotd: number | null
           id: number
           mvp_medals: number | null
           name: string
+          total_points: number | null
+          updated_at: string | null
         }
         Insert: {
           contact_number?: number | null
+          created_at?: string | null
+          gotd?: number | null
           id?: number
           mvp_medals?: number | null
           name: string
+          total_points?: number | null
+          updated_at?: string | null
         }
         Update: {
           contact_number?: number | null
+          created_at?: string | null
+          gotd?: number | null
           id?: number
           mvp_medals?: number | null
           name?: string
+          total_points?: number | null
+          updated_at?: string | null
         }
         Relationships: []
       }

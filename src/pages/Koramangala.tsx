@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import SocialLinks from "@/components/SocialLinks";
+import GamesPlayed from "@/components/GamesPlayed";
 import {
   Table,
   TableBody,
@@ -7,8 +7,22 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { useKoramangalaRealtimeData } from "@/hooks/useKoramangalaRealtimeData";
 
 const Koramangala = () => {
+  const { players, gamesCount, loading } = useKoramangalaRealtimeData();
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-background">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+          <p className="text-muted-foreground">Loading Koramangala Leaderboard...</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen p-4 relative">
       <div className="football-background"></div>
@@ -49,18 +63,11 @@ const Koramangala = () => {
                 </Table>
               </div>
             </Card>
-            
-            {/* Coming Soon Animation */}
-            <div className="mt-8 text-center">
-              <h3 className="text-2xl md:text-3xl font-bold text-green-400 animate-pulse">
-                Coming soon for upcoming season
-              </h3>
-            </div>
           </div>
 
           {/* Sidebar - Takes 1/3 on desktop */}
           <div className="space-y-6 sporty-float">
-            <SocialLinks />
+            <GamesPlayed count={gamesCount} />
           </div>
         </div>
       </div>
