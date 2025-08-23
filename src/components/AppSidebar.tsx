@@ -30,7 +30,7 @@ export function AppSidebar() {
             <span className={`text-sm font-bold ${!isExpanded ? "sr-only" : ""}`}>
               HOF
             </span>
-            <ChevronRight className={`h-4 w-4 transition-transform duration-300 ${isExpanded ? "rotate-90" : ""}`} />
+            <ChevronRight className={`h-4 w-4 text-white transition-transform duration-300 ${isExpanded ? "rotate-90" : ""}`} />
           </CollapsibleTrigger>
           
           <CollapsibleContent className="transition-all duration-300 ease-in-out">
@@ -43,7 +43,7 @@ export function AppSidebar() {
                     <MapPin className="h-4 w-4 text-white" />
                     <span className="text-sm font-medium text-white">Locations</span>
                   </div>
-                  <ChevronDown className={`h-3 w-3 transition-transform duration-200 ${isLocationsOpen ? "rotate-180" : ""}`} />
+                  <ChevronDown className={`h-3 w-3 text-white transition-transform duration-200 ${isLocationsOpen ? "rotate-180" : ""}`} />
                 </CollapsibleTrigger>
                 
                 <CollapsibleContent className="transition-all duration-200 ease-in-out">
@@ -59,7 +59,7 @@ export function AppSidebar() {
                                 className={({ isActive }) => 
                                   `${isActive 
                                     ? "bg-white text-green-600 font-medium" 
-                                    : "hover:bg-green-700 text-white"
+                                    : "bg-green-500 text-white hover:bg-green-700"
                                   } transition-colors flex items-center p-2 rounded-md`
                                 }
                               >
@@ -86,7 +86,7 @@ export function AppSidebar() {
                           className={({ isActive }) => 
                             `${isActive 
                               ? "bg-white text-green-600 font-medium" 
-                              : "hover:bg-green-700 text-white"
+                              : "bg-green-500 text-white hover:bg-green-700"
                             } transition-colors flex items-center p-2 rounded-md`
                           }
                         >
