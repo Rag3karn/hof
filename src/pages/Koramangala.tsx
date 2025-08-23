@@ -1,12 +1,5 @@
-import { Card } from "@/components/ui/card";
+import KoramangalaLeaderboard from "@/components/KoramangalaLeaderboard";
 import GamesPlayed from "@/components/GamesPlayed";
-import {
-  Table,
-  TableBody,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
 import { useKoramangalaRealtimeData } from "@/hooks/useKoramangalaRealtimeData";
 
 const Koramangala = () => {
@@ -42,27 +35,9 @@ const Koramangala = () => {
 
         {/* Main Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Empty Leaderboard - Takes 2/3 on desktop */}
+          {/* Leaderboard - Takes 2/3 on desktop */}
           <div className="lg:col-span-2 sporty-bounce">
-            <Card className="p-6">
-              <h2 className="text-2xl font-bold mb-4 text-green-400">Koramangala Leaderboard</h2>
-              <div className="overflow-auto">
-                <Table>
-                  <TableHeader>
-                    <TableRow className="bg-primary hover:bg-primary">
-                      <TableHead className="text-primary-foreground font-bold">#</TableHead>
-                      <TableHead className="text-primary-foreground font-bold">Player Name</TableHead>
-                      <TableHead className="text-primary-foreground font-bold text-center">MVP Medals</TableHead>
-                      <TableHead className="text-primary-foreground font-bold text-center">GOTD</TableHead>
-                      <TableHead className="text-primary-foreground font-bold text-center">Total Points</TableHead>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    {/* Empty table body */}
-                  </TableBody>
-                </Table>
-              </div>
-            </Card>
+            <KoramangalaLeaderboard players={players} />
           </div>
 
           {/* Sidebar - Takes 1/3 on desktop */}
