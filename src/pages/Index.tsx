@@ -42,7 +42,7 @@ const Index = () => {
 
           {/* Sidebar - Takes 1/3 on desktop */}
           <div className="space-y-6 sporty-float">
-            <GamesPlayed count={gamesCount} />
+            <GamesPlayed count={gamesCount} startDate="August 3rd, 2025" />
           </div>
         </div>
       </div>
