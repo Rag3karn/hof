@@ -3,19 +3,26 @@ import { NavLink } from "react-router-dom";
 import { Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "@/components/ui/sidebar";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { useState } from "react";
+
 const locationItems = [{
   title: "Hennur",
   url: "/",
   icon: MapPin
 }, {
-  title: "Koramangala",
+  title: "Koramangala", 
   url: "/koramangala",
   icon: MapPin
 }];
+
 export function AppSidebar() {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isLocationsOpen, setIsLocationsOpen] = useState(false);
-  return <Sidebar className={`${isExpanded ? "w-48" : "w-14"} bg-primary text-primary-foreground transition-all duration-300 ease-in-out`} collapsible="none">
+
+  return (
+    <Sidebar 
+      className={`${isExpanded ? "w-48" : "w-14"} bg-primary text-primary-foreground transition-all duration-300 ease-in-out`} 
+      collapsible="none"
+    >
       <SidebarContent className="p-2">
         {/* Main HOF Header */}
         <Collapsible open={isExpanded} onOpenChange={setIsExpanded}>
@@ -43,16 +50,25 @@ export function AppSidebar() {
                   <SidebarGroup className="ml-2 mt-1">
                     <SidebarGroupContent>
                       <SidebarMenu>
-                        {locationItems.map(item => <SidebarMenuItem key={item.title}>
+                        {locationItems.map(item => (
+                          <SidebarMenuItem key={item.title}>
                             <SidebarMenuButton asChild>
-                              <NavLink to={item.url} end className={({
-                            isActive
-                          }) => `${isActive ? "bg-primary-foreground text-primary font-medium" : "hover:bg-primary/80"} transition-colors`}>
+                              <NavLink 
+                                to={item.url} 
+                                end 
+                                className={({ isActive }) => 
+                                  `${isActive 
+                                    ? "bg-primary-foreground text-primary font-medium" 
+                                    : "hover:bg-primary/80"
+                                  } transition-colors`
+                                }
+                              >
                                 <item.icon className="mr-2 h-3 w-3" />
                                 <span className="text-sm">{item.title}</span>
                               </NavLink>
                             </SidebarMenuButton>
-                          </SidebarMenuItem>)}
+                          </SidebarMenuItem>
+                        ))}
                       </SidebarMenu>
                     </SidebarGroupContent>
                   </SidebarGroup>
@@ -65,11 +81,17 @@ export function AppSidebar() {
                   <SidebarMenu>
                     <SidebarMenuItem>
                       <SidebarMenuButton asChild>
-                        <NavLink to="/social-media" className={({
-                        isActive
-                      }) => `${isActive ? "bg-primary-foreground text-primary font-medium" : "hover:bg-primary/80"} transition-colors`}>
-                          <Users className="mr-2 h-4 w-4 bg-slate-50" />
-                          <span className="text-sm font-medium text-slate-50">Social Media</span>
+                        <NavLink 
+                          to="/social-media" 
+                          className={({ isActive }) => 
+                            `${isActive 
+                              ? "bg-primary-foreground text-primary font-medium" 
+                              : "hover:bg-primary/80"
+                            } transition-colors`
+                          }
+                        >
+                          <Users className="mr-2 h-4 w-4" />
+                          <span className="text-sm font-medium">Social Media</span>
                         </NavLink>
                       </SidebarMenuButton>
                     </SidebarMenuItem>
@@ -81,5 +103,6 @@ export function AppSidebar() {
           </CollapsibleContent>
         </Collapsible>
       </SidebarContent>
-    </Sidebar>;
+    </Sidebar>
+  );
 }
