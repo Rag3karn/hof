@@ -3,10 +3,10 @@ import { Trophy, Users, Target, Star } from "lucide-react";
 
 const Landing = () => {
   const stats = [
-    { icon: Users, label: "Active Players", value: "500+" },
-    { icon: Trophy, label: "Games Played", value: "200+" },
-    { icon: Target, label: "Goals Scored", value: "1000+" },
-    { icon: Star, label: "MVP Awards", value: "150+" }
+    { icon: Users, label: "Active Players", value: "15000+" },
+    { icon: Trophy, label: "Games Played", value: "1500+" },
+    { icon: Target, label: "Goals Scored", value: "10000+" },
+    { icon: Star, label: "MVP Awards", value: "1500+" }
   ];
 
   return (
