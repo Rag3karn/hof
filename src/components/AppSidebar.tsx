@@ -1,6 +1,6 @@
-import { MapPin, ChevronRight, ChevronDown, Users, Home } from "lucide-react";
+import { MapPin, ChevronRight, ChevronDown, Users, Home, Youtube, Instagram } from "lucide-react";
 import { NavLink } from "react-router-dom";
-import { Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "@/components/ui/sidebar";
+import { Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarFooter } from "@/components/ui/sidebar";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { useState } from "react";
 
@@ -128,6 +128,41 @@ export function AppSidebar() {
           </CollapsibleContent>
         </Collapsible>
       </SidebarContent>
+      
+      <SidebarFooter>
+        <div className="p-3 border-t border-green-500/30">
+          <div className="mb-3">
+            <h4 className="text-xs font-semibold text-center animate-pulse text-white">
+              🌟 Follow Us
+            </h4>
+          </div>
+          <div className="flex justify-center gap-3">
+            <a
+              href="https://www.youtube.com/@HumansOfFootball"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-8 h-8 rounded-full bg-red-600 hover:bg-red-700 text-white transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-red-500/25"
+              title="YouTube"
+            >
+              <Youtube size={14} />
+            </a>
+            <a
+              href="https://www.instagram.com/humans.of.football/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-purple-500/25"
+              title="Instagram"
+            >
+              <Instagram size={14} />
+            </a>
+          </div>
+          {isExpanded && (
+            <div className="mt-2 text-xs text-center text-green-100">
+              Humans of Football
+            </div>
+          )}
+        </div>
+      </SidebarFooter>
     </Sidebar>
   );
 }

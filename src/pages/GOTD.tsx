@@ -1,4 +1,3 @@
-import SocialLinks from "@/components/SocialLinks";
 import RecordedGames from "@/components/RecordedGames";
 import Highlights from "@/components/Highlights";
 import { Button } from "@/components/ui/button";
@@ -26,21 +25,13 @@ const SocialMedia = () => {
           </Button>
         </div>
 
-        {/* Main Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {/* Left Column */}
-          <div className="space-y-6">
-            <div className="sporty-bounce">
-              <RecordedGames />
-            </div>
-            <div className="sporty-float">
-              <Highlights />
-            </div>
+        {/* Main Content */}
+        <div className="max-w-4xl mx-auto space-y-8">
+          <div className="sporty-bounce">
+            <RecordedGames />
           </div>
-
-          {/* Right Column - Social Links */}
           <div className="sporty-float">
-            <SocialLinks />
+            <Highlights />
           </div>
         </div>
       </div>
