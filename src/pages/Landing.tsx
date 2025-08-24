@@ -33,8 +33,8 @@ const Landing = () => {
               return (
                 <Card key={index} className="p-6 text-center hover-scale" style={{ animationDelay: `${0.4 + index * 0.1}s` }}>
                   <Icon className="h-8 w-8 text-primary mx-auto mb-3" />
-                  <div className="text-2xl font-bold text-primary-foreground mb-1">{stat.value}</div>
-                  <div className="text-sm text-primary-foreground/70">{stat.label}</div>
+                  <div className="text-2xl font-bold text-card-foreground mb-1">{stat.value}</div>
+                  <div className="text-sm text-muted-foreground">{stat.label}</div>
                 </Card>
               );
             })}
