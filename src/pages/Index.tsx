@@ -1,5 +1,6 @@
 import HennurLeaderboard from "@/components/HennurLeaderboard";
 import GamesPlayed from "@/components/GamesPlayed";
+import Rewards from "@/components/Rewards";
 import { useHennurRealtimeData } from "@/hooks/useHennurRealtimeData";
 // Logo will be updated when properly saved
 
@@ -43,6 +44,7 @@ const Index = () => {
           {/* Sidebar - Takes 1/3 on desktop */}
           <div className="space-y-6 sporty-float">
             <GamesPlayed count={gamesCount} startDate="August 3rd, 2025" />
+            <Rewards />
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import SocialLinks from "@/components/SocialLinks";
 import RecordedGames from "@/components/RecordedGames";
+import Highlights from "@/components/Highlights";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -19,7 +20,7 @@ const SocialMedia = () => {
               <p className="text-muted-foreground">Humans of Football Content</p>
             </div>
           </div>
-          <Button onClick={() => navigate('/')} variant="outline" className="text-green-400 border-green-400 hover:bg-green-400 hover:text-background">
+          <Button onClick={() => navigate('/hennur')} variant="outline" className="text-green-400 border-green-400 hover:bg-green-400 hover:text-background">
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Hennur
           </Button>
@@ -27,12 +28,17 @@ const SocialMedia = () => {
 
         {/* Main Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {/* Recorded Games - Takes 1/2 on desktop */}
-          <div className="sporty-bounce">
-            <RecordedGames />
+          {/* Left Column */}
+          <div className="space-y-6">
+            <div className="sporty-bounce">
+              <RecordedGames />
+            </div>
+            <div className="sporty-float">
+              <Highlights />
+            </div>
           </div>
 
-          {/* Social Links - Takes 1/2 on desktop */}
+          {/* Right Column - Social Links */}
           <div className="sporty-float">
             <SocialLinks />
           </div>

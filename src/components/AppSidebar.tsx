@@ -1,4 +1,4 @@
-import { MapPin, ChevronRight, ChevronDown, Users } from "lucide-react";
+import { MapPin, ChevronRight, ChevronDown, Users, Home } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import { Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "@/components/ui/sidebar";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const locationItems = [{
   title: "Hennur",
-  url: "/",
+  url: "/hennur",
   icon: MapPin
 }, {
   title: "Koramangala", 
@@ -36,6 +36,31 @@ export function AppSidebar() {
           <CollapsibleContent className="transition-all duration-300 ease-in-out">
             <div className="space-y-2 mt-2">
               
+              {/* Home Link */}
+              <SidebarGroup>
+                <SidebarGroupContent>
+                  <SidebarMenu>
+                    <SidebarMenuItem>
+                      <SidebarMenuButton asChild>
+                        <NavLink 
+                          to="/" 
+                          end
+                          className={({ isActive }) => 
+                            `${isActive 
+                              ? "bg-white text-green-600 font-medium" 
+                              : "bg-green-500 text-white hover:bg-green-700"
+                            } transition-colors flex items-center p-2 rounded-md`
+                          }
+                        >
+                          <Home className="mr-2 h-4 w-4" />
+                          <span className="text-sm font-medium">Home</span>
+                        </NavLink>
+                      </SidebarMenuButton>
+                    </SidebarMenuItem>
+                  </SidebarMenu>
+                </SidebarGroupContent>
+              </SidebarGroup>
+
               {/* Locations Dropdown */}
               <Collapsible open={isLocationsOpen} onOpenChange={setIsLocationsOpen}>
                 <CollapsibleTrigger className="flex w-full items-center justify-between p-2 hover:bg-green-700 rounded-md transition-colors text-white">
