@@ -46,8 +46,8 @@ export default function Rewards() {
             <div key={index} className={`flex items-center gap-3 p-3 rounded-lg ${reward.bgColor} border border-border/50 transition-all hover:shadow-md sporty-float`}>
               <Icon className={`h-6 w-6 ${reward.iconColor}`} />
               <div className="flex-1">
-                <span className="font-medium text-foreground">{reward.position}</span>
-                <span className="text-muted-foreground"> - {reward.reward}</span>
+                <span className="font-medium text-gray-800">{reward.position}</span>
+                <span className="text-gray-600"> - {reward.reward}</span>
               </div>
             </div>
           );
