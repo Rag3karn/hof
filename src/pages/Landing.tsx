@@ -19,10 +19,10 @@ const Landing = () => {
           <div className="w-32 h-32 mx-auto mb-8 bg-gradient-to-br from-primary to-accent rounded-3xl flex items-center justify-center text-primary-foreground font-bold text-4xl shadow-2xl sporty-bounce">
             HoF
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-primary-foreground animate-fade-in">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg animate-fade-in">
             Humans of Football
           </h1>
-          <p className="text-xl md:text-2xl text-primary-foreground/80 mb-12 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <p className="text-xl md:text-2xl text-green-100 mb-12 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             Revolutionizing the football space in India
           </p>
           
