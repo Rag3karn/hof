@@ -1,8 +1,17 @@
-import { MapPin, Home, Users, Youtube, Instagram } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import { MapPin, Home, Users, Youtube, Instagram, ChevronDown } from "lucide-react";
+import { NavLink, useLocation } from "react-router-dom";
 import hofLogo from "@/assets/hof-logo.png";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export function TopNavigation() {
+  const location = useLocation();
+  const isLocationActive = location.pathname === "/hennur" || location.pathname === "/koramangala";
+
   return (
     <nav className="bg-green-600 text-white shadow-lg border-b border-green-500/30">
       <div className="container mx-auto px-4">
@@ -29,31 +38,36 @@ export function TopNavigation() {
               <span>Home</span>
             </NavLink>
 
-            <NavLink 
-              to="/hennur" 
-              className={({ isActive }) => 
-                `${isActive 
-                  ? "bg-white text-green-600 font-medium" 
-                  : "text-white hover:bg-green-700"
-                } transition-colors flex items-center gap-2 px-4 py-2 rounded-md text-sm`
-              }
-            >
-              <MapPin className="h-4 w-4" />
-              <span>Hennur</span>
-            </NavLink>
-
-            <NavLink 
-              to="/koramangala" 
-              className={({ isActive }) => 
-                `${isActive 
-                  ? "bg-white text-green-600 font-medium" 
-                  : "text-white hover:bg-green-700"
-                } transition-colors flex items-center gap-2 px-4 py-2 rounded-md text-sm`
-              }
-            >
-              <MapPin className="h-4 w-4" />
-              <span>Koramangala</span>
-            </NavLink>
+            <DropdownMenu>
+              <DropdownMenuTrigger className={`${isLocationActive 
+                ? "bg-white text-green-600 font-medium" 
+                : "text-white hover:bg-green-700"
+              } transition-colors flex items-center gap-2 px-4 py-2 rounded-md text-sm`}>
+                <MapPin className="h-4 w-4" />
+                <span>Locations</span>
+                <ChevronDown className="h-4 w-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-white border border-gray-200 shadow-lg">
+                <DropdownMenuItem asChild>
+                  <NavLink 
+                    to="/hennur" 
+                    className="flex items-center gap-2 px-3 py-2 text-gray-700 hover:bg-green-50 cursor-pointer w-full"
+                  >
+                    <MapPin className="h-4 w-4" />
+                    <span>Hennur</span>
+                  </NavLink>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <NavLink 
+                    to="/koramangala" 
+                    className="flex items-center gap-2 px-3 py-2 text-gray-700 hover:bg-green-50 cursor-pointer w-full"
+                  >
+                    <MapPin className="h-4 w-4" />
+                    <span>Koramangala</span>
+                  </NavLink>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
 
             <NavLink 
               to="/social-media" 
