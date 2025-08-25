@@ -1,0 +1,97 @@
+import { MapPin, Home, Users, Youtube, Instagram } from "lucide-react";
+import { NavLink } from "react-router-dom";
+import hofLogo from "@/assets/hof-logo.png";
+
+export function TopNavigation() {
+  return (
+    <nav className="bg-green-600 text-white shadow-lg border-b border-green-500/30">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo and Brand */}
+          <div className="flex items-center gap-3">
+            <img src={hofLogo} alt="HOF Logo" className="w-10 h-10" />
+            <span className="text-xl font-bold">Humans of Football</span>
+          </div>
+
+          {/* Navigation Links */}
+          <div className="flex items-center gap-1">
+            <NavLink 
+              to="/" 
+              end
+              className={({ isActive }) => 
+                `${isActive 
+                  ? "bg-white text-green-600 font-medium" 
+                  : "text-white hover:bg-green-700"
+                } transition-colors flex items-center gap-2 px-4 py-2 rounded-md text-sm`
+              }
+            >
+              <Home className="h-4 w-4" />
+              <span>Home</span>
+            </NavLink>
+
+            <NavLink 
+              to="/hennur" 
+              className={({ isActive }) => 
+                `${isActive 
+                  ? "bg-white text-green-600 font-medium" 
+                  : "text-white hover:bg-green-700"
+                } transition-colors flex items-center gap-2 px-4 py-2 rounded-md text-sm`
+              }
+            >
+              <MapPin className="h-4 w-4" />
+              <span>Hennur</span>
+            </NavLink>
+
+            <NavLink 
+              to="/koramangala" 
+              className={({ isActive }) => 
+                `${isActive 
+                  ? "bg-white text-green-600 font-medium" 
+                  : "text-white hover:bg-green-700"
+                } transition-colors flex items-center gap-2 px-4 py-2 rounded-md text-sm`
+              }
+            >
+              <MapPin className="h-4 w-4" />
+              <span>Koramangala</span>
+            </NavLink>
+
+            <NavLink 
+              to="/social-media" 
+              className={({ isActive }) => 
+                `${isActive 
+                  ? "bg-white text-green-600 font-medium" 
+                  : "text-white hover:bg-green-700"
+                } transition-colors flex items-center gap-2 px-4 py-2 rounded-md text-sm`
+              }
+            >
+              <Users className="h-4 w-4" />
+              <span>Social Media</span>
+            </NavLink>
+          </div>
+
+          {/* Social Media Links */}
+          <div className="flex items-center gap-2">
+            <a
+              href="https://www.youtube.com/@HumansOfFootball"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-8 h-8 rounded-full bg-red-600 hover:bg-red-700 text-white transition-all duration-300 hover:scale-110"
+              title="YouTube"
+            >
+              <Youtube size={14} />
+            </a>
+            <a
+              href="https://www.instagram.com/humans.of.football/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white transition-all duration-300 hover:scale-110"
+              title="Instagram"
+            >
+              <Instagram size={14} />
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+}
