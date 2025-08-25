@@ -26,6 +26,11 @@ const recordedGames = [
     title: "Hennur Game - 23/08/2025",
     score: "10(Black) - 6(White)", 
     link: "https://youtu.be/khZUGnwwXPE"
+  },
+  {
+    title: "Hennur Game - 24/08/2025",
+    score: "17(Black) - 6(White)",
+    link: "https://youtu.be/s41GsHfQ94A?si=Q1KpovAHuycvcp-y"
   }
 ];
 
