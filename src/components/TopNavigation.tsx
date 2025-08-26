@@ -1,6 +1,6 @@
 import { MapPin, Home, Users, Youtube, Instagram, ChevronDown } from "lucide-react";
 import { NavLink, useLocation } from "react-router-dom";
-import hofLogo from "@/assets/hof-logo.png";
+import hofLogo from "@/assets/hog-logo.png";
 import { useState } from "react";
 import {
   DropdownMenu,
