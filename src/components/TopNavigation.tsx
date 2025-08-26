@@ -18,7 +18,7 @@ export function TopNavigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo and Brand */}
           <div className="flex items-center gap-3">
-            <img src={hofLogo} alt="HOF Logo" className="w-10 h-10" />
+            <img src={hofLogo} alt="HOF Logo" className="w-15 h-15" />
             <span className="text-xl font-bold">Humans of Football</span>
           </div>
 
