@@ -1,6 +1,5 @@
 import { MapPin, Home, Users, Youtube, Instagram, ChevronDown } from "lucide-react";
 import { NavLink, useLocation } from "react-router-dom";
-import hofLogo from "@/assets/hof-logo.png";
 import { useState } from "react";
 import {
   DropdownMenu,
@@ -22,7 +21,7 @@ export function TopNavigation() {
         <div className="flex items-center justify-between h-16 md:h-16">
           {/* Logo and Brand */}
           <div className="flex items-center gap-2 md:gap-3">
-            <img src={hofLogo} alt="HOF Logo" className="w-8 h-8 md:w-10 md:h-10" />
+            <img src="/lovable-uploads/479e3388-6c62-4b5a-a36f-30e9ee359319.png" alt="HOF Logo" className="w-8 h-8 md:w-10 md:h-10" />
             <span className="text-lg md:text-xl font-bold truncate">
               <span className="hidden sm:inline">Humans of Football</span>
               <span className="sm:hidden">HoF</span>
