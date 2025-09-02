@@ -8,6 +8,12 @@ import Landing from "./pages/Landing";
 import Index from "./pages/Index";
 import SocialMedia from "./pages/GOTD";
 import Koramangala from "./pages/Koramangala";
+import Bengaluru from "./pages/Bengaluru";
+import Mumbai from "./pages/Mumbai";
+import Pune from "./pages/Pune";
+import Kolkata from "./pages/Kolkata";
+import Delhi from "./pages/Delhi";
+import Ahmedabad from "./pages/Ahmedabad";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +32,12 @@ const App = () => (
               <Route path="/hennur" element={<Index />} />
               <Route path="/social-media" element={<SocialMedia />} />
               <Route path="/koramangala" element={<Koramangala />} />
+              <Route path="/bengaluru" element={<Bengaluru />} />
+              <Route path="/mumbai" element={<Mumbai />} />
+              <Route path="/pune" element={<Pune />} />
+              <Route path="/kolkata" element={<Kolkata />} />
+              <Route path="/delhi" element={<Delhi />} />
+              <Route path="/ahmedabad" element={<Ahmedabad />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

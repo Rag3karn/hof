@@ -66,25 +66,111 @@ export function TopNavigation() {
                 <span>Locations</span>
                 <ChevronDown className="h-4 w-4" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-white border border-gray-200 shadow-lg">
-                <DropdownMenuItem asChild>
-                  <NavLink 
-                    to="/hennur" 
-                    className="flex items-center gap-2 px-3 py-2 text-gray-700 hover:bg-green-50 cursor-pointer w-full"
-                  >
-                    <MapPin className="h-4 w-4" />
-                    <span>Hennur</span>
-                  </NavLink>
-                </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <NavLink 
-                    to="/koramangala" 
-                    className="flex items-center gap-2 px-3 py-2 text-gray-700 hover:bg-green-50 cursor-pointer w-full"
-                  >
-                    <MapPin className="h-4 w-4" />
-                    <span>Koramangala</span>
-                  </NavLink>
-                </DropdownMenuItem>
+              <DropdownMenuContent className="bg-white border border-gray-200 shadow-lg z-50">
+                <DropdownMenu>
+                  <DropdownMenuTrigger className="w-full text-left">
+                    <DropdownMenuItem className="flex items-center justify-between w-full cursor-pointer">
+                      States
+                      <ChevronDown size={16} />
+                    </DropdownMenuItem>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="bg-white border border-gray-200 shadow-lg z-50 ml-2">
+                    <DropdownMenu>
+                      <DropdownMenuTrigger className="w-full text-left">
+                        <DropdownMenuItem className="flex items-center justify-between w-full cursor-pointer">
+                          Maharashtra
+                          <ChevronDown size={16} />
+                        </DropdownMenuItem>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent className="bg-white border border-gray-200 shadow-lg z-50 ml-2">
+                        <DropdownMenuItem asChild>
+                          <NavLink to="/mumbai" className="flex items-center gap-2 px-3 py-2 text-gray-700 hover:bg-green-50 cursor-pointer w-full">
+                            Mumbai
+                          </NavLink>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem asChild>
+                          <NavLink to="/pune" className="flex items-center gap-2 px-3 py-2 text-gray-700 hover:bg-green-50 cursor-pointer w-full">
+                            Pune
+                          </NavLink>
+                        </DropdownMenuItem>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                    
+                    <DropdownMenu>
+                      <DropdownMenuTrigger className="w-full text-left">
+                        <DropdownMenuItem className="flex items-center justify-between w-full cursor-pointer">
+                          Karnataka
+                          <ChevronDown size={16} />
+                        </DropdownMenuItem>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent className="bg-white border border-gray-200 shadow-lg z-50 ml-2">
+                        <DropdownMenuItem asChild>
+                          <NavLink to="/bengaluru" className="flex items-center gap-2 px-3 py-2 text-gray-700 hover:bg-green-50 cursor-pointer w-full">
+                            Bengaluru
+                          </NavLink>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem asChild>
+                          <NavLink to="/hennur" className="flex items-center gap-2 px-3 py-2 text-gray-700 hover:bg-green-50 cursor-pointer w-full">
+                            Hennur
+                          </NavLink>
+                        </DropdownMenuItem>
+                        <DropdownMenuItem asChild>
+                          <NavLink to="/koramangala" className="flex items-center gap-2 px-3 py-2 text-gray-700 hover:bg-green-50 cursor-pointer w-full">
+                            Koramangala
+                          </NavLink>
+                        </DropdownMenuItem>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                    
+                    <DropdownMenu>
+                      <DropdownMenuTrigger className="w-full text-left">
+                        <DropdownMenuItem className="flex items-center justify-between w-full cursor-pointer">
+                          West Bengal
+                          <ChevronDown size={16} />
+                        </DropdownMenuItem>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent className="bg-white border border-gray-200 shadow-lg z-50 ml-2">
+                        <DropdownMenuItem asChild>
+                          <NavLink to="/kolkata" className="flex items-center gap-2 px-3 py-2 text-gray-700 hover:bg-green-50 cursor-pointer w-full">
+                            Kolkata
+                          </NavLink>
+                        </DropdownMenuItem>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                    
+                    <DropdownMenu>
+                      <DropdownMenuTrigger className="w-full text-left">
+                        <DropdownMenuItem className="flex items-center justify-between w-full cursor-pointer">
+                          Delhi
+                          <ChevronDown size={16} />
+                        </DropdownMenuItem>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent className="bg-white border border-gray-200 shadow-lg z-50 ml-2">
+                        <DropdownMenuItem asChild>
+                          <NavLink to="/delhi" className="flex items-center gap-2 px-3 py-2 text-gray-700 hover:bg-green-50 cursor-pointer w-full">
+                            Delhi
+                          </NavLink>
+                        </DropdownMenuItem>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                    
+                    <DropdownMenu>
+                      <DropdownMenuTrigger className="w-full text-left">
+                        <DropdownMenuItem className="flex items-center justify-between w-full cursor-pointer">
+                          Gujarat
+                          <ChevronDown size={16} />
+                        </DropdownMenuItem>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent className="bg-white border border-gray-200 shadow-lg z-50 ml-2">
+                        <DropdownMenuItem asChild>
+                          <NavLink to="/ahmedabad" className="flex items-center gap-2 px-3 py-2 text-gray-700 hover:bg-green-50 cursor-pointer w-full">
+                            Ahmedabad
+                          </NavLink>
+                        </DropdownMenuItem>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                  </DropdownMenuContent>
+                </DropdownMenu>
               </DropdownMenuContent>
             </DropdownMenu>
 

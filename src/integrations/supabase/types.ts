@@ -14,6 +14,150 @@ export type Database = {
   }
   public: {
     Tables: {
+      ahmedabad_games: {
+        Row: {
+          date: string
+          id: string
+        }
+        Insert: {
+          date: string
+          id?: string
+        }
+        Update: {
+          date?: string
+          id?: string
+        }
+        Relationships: []
+      }
+      ahmedabad_players: {
+        Row: {
+          contact_number: number | null
+          created_at: string | null
+          gotd: number | null
+          id: number
+          mvp_medals: number | null
+          name: string
+          total_points: number | null
+          updated_at: string | null
+        }
+        Insert: {
+          contact_number?: number | null
+          created_at?: string | null
+          gotd?: number | null
+          id?: number
+          mvp_medals?: number | null
+          name: string
+          total_points?: number | null
+          updated_at?: string | null
+        }
+        Update: {
+          contact_number?: number | null
+          created_at?: string | null
+          gotd?: number | null
+          id?: number
+          mvp_medals?: number | null
+          name?: string
+          total_points?: number | null
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
+      bengaluru_games: {
+        Row: {
+          date: string
+          id: string
+        }
+        Insert: {
+          date: string
+          id?: string
+        }
+        Update: {
+          date?: string
+          id?: string
+        }
+        Relationships: []
+      }
+      bengaluru_players: {
+        Row: {
+          contact_number: number | null
+          created_at: string | null
+          gotd: number | null
+          id: number
+          mvp_medals: number | null
+          name: string
+          total_points: number | null
+          updated_at: string | null
+        }
+        Insert: {
+          contact_number?: number | null
+          created_at?: string | null
+          gotd?: number | null
+          id?: number
+          mvp_medals?: number | null
+          name: string
+          total_points?: number | null
+          updated_at?: string | null
+        }
+        Update: {
+          contact_number?: number | null
+          created_at?: string | null
+          gotd?: number | null
+          id?: number
+          mvp_medals?: number | null
+          name?: string
+          total_points?: number | null
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
+      delhi_games: {
+        Row: {
+          date: string
+          id: string
+        }
+        Insert: {
+          date: string
+          id?: string
+        }
+        Update: {
+          date?: string
+          id?: string
+        }
+        Relationships: []
+      }
+      delhi_players: {
+        Row: {
+          contact_number: number | null
+          created_at: string | null
+          gotd: number | null
+          id: number
+          mvp_medals: number | null
+          name: string
+          total_points: number | null
+          updated_at: string | null
+        }
+        Insert: {
+          contact_number?: number | null
+          created_at?: string | null
+          gotd?: number | null
+          id?: number
+          mvp_medals?: number | null
+          name: string
+          total_points?: number | null
+          updated_at?: string | null
+        }
+        Update: {
+          contact_number?: number | null
+          created_at?: string | null
+          gotd?: number | null
+          id?: number
+          mvp_medals?: number | null
+          name?: string
+          total_points?: number | null
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
       hennur_games: {
         Row: {
           date: string
@@ -62,6 +206,54 @@ export type Database = {
         }
         Relationships: []
       }
+      kolkata_games: {
+        Row: {
+          date: string
+          id: string
+        }
+        Insert: {
+          date: string
+          id?: string
+        }
+        Update: {
+          date?: string
+          id?: string
+        }
+        Relationships: []
+      }
+      kolkata_players: {
+        Row: {
+          contact_number: number | null
+          created_at: string | null
+          gotd: number | null
+          id: number
+          mvp_medals: number | null
+          name: string
+          total_points: number | null
+          updated_at: string | null
+        }
+        Insert: {
+          contact_number?: number | null
+          created_at?: string | null
+          gotd?: number | null
+          id?: number
+          mvp_medals?: number | null
+          name: string
+          total_points?: number | null
+          updated_at?: string | null
+        }
+        Update: {
+          contact_number?: number | null
+          created_at?: string | null
+          gotd?: number | null
+          id?: number
+          mvp_medals?: number | null
+          name?: string
+          total_points?: number | null
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
       koramangala_games: {
         Row: {
           date: string
@@ -78,6 +270,102 @@ export type Database = {
         Relationships: []
       }
       koramangala_players: {
+        Row: {
+          contact_number: number | null
+          created_at: string | null
+          gotd: number | null
+          id: number
+          mvp_medals: number | null
+          name: string
+          total_points: number | null
+          updated_at: string | null
+        }
+        Insert: {
+          contact_number?: number | null
+          created_at?: string | null
+          gotd?: number | null
+          id?: number
+          mvp_medals?: number | null
+          name: string
+          total_points?: number | null
+          updated_at?: string | null
+        }
+        Update: {
+          contact_number?: number | null
+          created_at?: string | null
+          gotd?: number | null
+          id?: number
+          mvp_medals?: number | null
+          name?: string
+          total_points?: number | null
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
+      mumbai_games: {
+        Row: {
+          date: string
+          id: string
+        }
+        Insert: {
+          date: string
+          id?: string
+        }
+        Update: {
+          date?: string
+          id?: string
+        }
+        Relationships: []
+      }
+      mumbai_players: {
+        Row: {
+          contact_number: number | null
+          created_at: string | null
+          gotd: number | null
+          id: number
+          mvp_medals: number | null
+          name: string
+          total_points: number | null
+          updated_at: string | null
+        }
+        Insert: {
+          contact_number?: number | null
+          created_at?: string | null
+          gotd?: number | null
+          id?: number
+          mvp_medals?: number | null
+          name: string
+          total_points?: number | null
+          updated_at?: string | null
+        }
+        Update: {
+          contact_number?: number | null
+          created_at?: string | null
+          gotd?: number | null
+          id?: number
+          mvp_medals?: number | null
+          name?: string
+          total_points?: number | null
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
+      pune_games: {
+        Row: {
+          date: string
+          id: string
+        }
+        Insert: {
+          date: string
+          id?: string
+        }
+        Update: {
+          date?: string
+          id?: string
+        }
+        Relationships: []
+      }
+      pune_players: {
         Row: {
           contact_number: number | null
           created_at: string | null
