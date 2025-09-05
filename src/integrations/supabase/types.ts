@@ -164,51 +164,6 @@ export type Database = {
         }
         Relationships: []
       }
-      hennur_games: {
-        Row: {
-          date: string
-          id: string
-        }
-        Insert: {
-          date: string
-          id?: string
-        }
-        Update: {
-          date?: string
-          id?: string
-        }
-        Relationships: []
-      }
-      hennur_players: {
-        Row: {
-          created_at: string | null
-          gotd: number | null
-          id: number
-          mvp_medals: number | null
-          name: string
-          total_points: number | null
-          updated_at: string | null
-        }
-        Insert: {
-          created_at?: string | null
-          gotd?: number | null
-          id?: number
-          mvp_medals?: number | null
-          name: string
-          total_points?: number | null
-          updated_at?: string | null
-        }
-        Update: {
-          created_at?: string | null
-          gotd?: number | null
-          id?: number
-          mvp_medals?: number | null
-          name?: string
-          total_points?: number | null
-          updated_at?: string | null
-        }
-        Relationships: []
-      }
       kolkata_games: {
         Row: {
           date: string
@@ -225,51 +180,6 @@ export type Database = {
         Relationships: []
       }
       kolkata_players: {
-        Row: {
-          created_at: string | null
-          gotd: number | null
-          id: number
-          mvp_medals: number | null
-          name: string
-          total_points: number | null
-          updated_at: string | null
-        }
-        Insert: {
-          created_at?: string | null
-          gotd?: number | null
-          id?: number
-          mvp_medals?: number | null
-          name: string
-          total_points?: number | null
-          updated_at?: string | null
-        }
-        Update: {
-          created_at?: string | null
-          gotd?: number | null
-          id?: number
-          mvp_medals?: number | null
-          name?: string
-          total_points?: number | null
-          updated_at?: string | null
-        }
-        Relationships: []
-      }
-      koramangala_games: {
-        Row: {
-          date: string
-          id: string
-        }
-        Insert: {
-          date: string
-          id?: string
-        }
-        Update: {
-          date?: string
-          id?: string
-        }
-        Relationships: []
-      }
-      koramangala_players: {
         Row: {
           created_at: string | null
           gotd: number | null

@@ -4,7 +4,6 @@ import { supabase } from '@/integrations/supabase/client';
 interface BengaluruPlayer {
   id: number;
   name: string;
-  contact_number: number | null;
   mvp_medals: number;
   gotd: number;
   total_points: number;
