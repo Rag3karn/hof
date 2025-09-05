@@ -31,7 +31,6 @@ export type Database = {
       }
       ahmedabad_players: {
         Row: {
-          contact_number: number | null
           created_at: string | null
           gotd: number | null
           id: number
@@ -41,7 +40,6 @@ export type Database = {
           updated_at: string | null
         }
         Insert: {
-          contact_number?: number | null
           created_at?: string | null
           gotd?: number | null
           id?: number
@@ -51,7 +49,6 @@ export type Database = {
           updated_at?: string | null
         }
         Update: {
-          contact_number?: number | null
           created_at?: string | null
           gotd?: number | null
           id?: number
@@ -79,7 +76,6 @@ export type Database = {
       }
       bengaluru_players: {
         Row: {
-          contact_number: number | null
           created_at: string | null
           gotd: number | null
           id: number
@@ -89,7 +85,6 @@ export type Database = {
           updated_at: string | null
         }
         Insert: {
-          contact_number?: number | null
           created_at?: string | null
           gotd?: number | null
           id?: number
@@ -99,7 +94,6 @@ export type Database = {
           updated_at?: string | null
         }
         Update: {
-          contact_number?: number | null
           created_at?: string | null
           gotd?: number | null
           id?: number
@@ -127,7 +121,6 @@ export type Database = {
       }
       delhi_players: {
         Row: {
-          contact_number: number | null
           created_at: string | null
           gotd: number | null
           id: number
@@ -137,7 +130,6 @@ export type Database = {
           updated_at: string | null
         }
         Insert: {
-          contact_number?: number | null
           created_at?: string | null
           gotd?: number | null
           id?: number
@@ -147,7 +139,6 @@ export type Database = {
           updated_at?: string | null
         }
         Update: {
-          contact_number?: number | null
           created_at?: string | null
           gotd?: number | null
           id?: number
@@ -155,6 +146,21 @@ export type Database = {
           name?: string
           total_points?: number | null
           updated_at?: string | null
+        }
+        Relationships: []
+      }
+      games: {
+        Row: {
+          date: string
+          id: string
+        }
+        Insert: {
+          date: string
+          id?: string
+        }
+        Update: {
+          date?: string
+          id?: string
         }
         Relationships: []
       }
@@ -175,7 +181,6 @@ export type Database = {
       }
       hennur_players: {
         Row: {
-          contact_number: number | null
           created_at: string | null
           gotd: number | null
           id: number
@@ -185,7 +190,6 @@ export type Database = {
           updated_at: string | null
         }
         Insert: {
-          contact_number?: number | null
           created_at?: string | null
           gotd?: number | null
           id?: number
@@ -195,7 +199,6 @@ export type Database = {
           updated_at?: string | null
         }
         Update: {
-          contact_number?: number | null
           created_at?: string | null
           gotd?: number | null
           id?: number
@@ -223,7 +226,6 @@ export type Database = {
       }
       kolkata_players: {
         Row: {
-          contact_number: number | null
           created_at: string | null
           gotd: number | null
           id: number
@@ -233,7 +235,6 @@ export type Database = {
           updated_at: string | null
         }
         Insert: {
-          contact_number?: number | null
           created_at?: string | null
           gotd?: number | null
           id?: number
@@ -243,7 +244,6 @@ export type Database = {
           updated_at?: string | null
         }
         Update: {
-          contact_number?: number | null
           created_at?: string | null
           gotd?: number | null
           id?: number
@@ -271,7 +271,6 @@ export type Database = {
       }
       koramangala_players: {
         Row: {
-          contact_number: number | null
           created_at: string | null
           gotd: number | null
           id: number
@@ -281,7 +280,6 @@ export type Database = {
           updated_at: string | null
         }
         Insert: {
-          contact_number?: number | null
           created_at?: string | null
           gotd?: number | null
           id?: number
@@ -291,7 +289,6 @@ export type Database = {
           updated_at?: string | null
         }
         Update: {
-          contact_number?: number | null
           created_at?: string | null
           gotd?: number | null
           id?: number
@@ -319,7 +316,6 @@ export type Database = {
       }
       mumbai_players: {
         Row: {
-          contact_number: number | null
           created_at: string | null
           gotd: number | null
           id: number
@@ -329,7 +325,6 @@ export type Database = {
           updated_at: string | null
         }
         Insert: {
-          contact_number?: number | null
           created_at?: string | null
           gotd?: number | null
           id?: number
@@ -339,7 +334,6 @@ export type Database = {
           updated_at?: string | null
         }
         Update: {
-          contact_number?: number | null
           created_at?: string | null
           gotd?: number | null
           id?: number
@@ -367,7 +361,6 @@ export type Database = {
       }
       pune_players: {
         Row: {
-          contact_number: number | null
           created_at: string | null
           gotd: number | null
           id: number
@@ -377,7 +370,6 @@ export type Database = {
           updated_at: string | null
         }
         Insert: {
-          contact_number?: number | null
           created_at?: string | null
           gotd?: number | null
           id?: number
@@ -387,7 +379,6 @@ export type Database = {
           updated_at?: string | null
         }
         Update: {
-          contact_number?: number | null
           created_at?: string | null
           gotd?: number | null
           id?: number
